@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.char-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 250px 100px;
+
+    &:hover .char-list__name {
+      bottom: -13px;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100%;
+    right: 0;
+    bottom: -100px;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.2s;
+    padding: 20px;
+  }
+  &__item {
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+    height: auto;
+    margin-bottom: 20px;
+
+    @media (max-width: $mobile) {
+      margin: 20px auto;
+    }
+
+    &:hover {
+      position: relative;
+      transform: translateY(-3%);
+    }
+  }
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

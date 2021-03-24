@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.home {
+  display: flex;
+  align-items: center;
+  padding: 40px 0px;
+  &__content {
+    max-width: 450px;
+
+    h1 {
+      font-size: 42px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  &__btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(black, 20%);
+    }
+  }
+  &__image img {
+    max-width: 500px;
+    width: 100%;
+
+    @media (max-width: $tablets) {
+      display: none;
+    }
+  }
+}
